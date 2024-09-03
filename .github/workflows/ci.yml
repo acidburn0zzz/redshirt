@@ -76,7 +76,7 @@ jobs:
         apt-get update
         apt-get install -y clang-9
     - name: Download WASM modules
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: wasm-modules
         path: modules/target/wasm32-unknown-unknown/release
@@ -113,7 +113,7 @@ jobs:
         target: wasm32-unknown-unknown
         override: true
     - name: Download WASM modules
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: wasm-modules
         path: modules/target/wasm32-unknown-unknown/release
@@ -152,7 +152,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Download WASM modules
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: wasm-modules
         path: modules/target/wasm32-unknown-unknown/release
@@ -202,7 +202,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Download kernel
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: kernel-x86_64-multiboot2
         path: .
